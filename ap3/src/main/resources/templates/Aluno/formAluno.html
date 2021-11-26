@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://kit.fontawesome.com/006642858d.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
+<title>CADASTRO ALUNO</title>
+</head>
+<body>
+<div th:replace="fragmentos/fragmentos :: cabeçalho" ></div>
+
+<div class="container" style="margin-top: 50px;">
+	<h4>+ Inserir alunos</h4>
+	<hr>
+	<form method="post" action="/InsertAlunos" th:object="${aluno}">
+		<div class="row" >
+			<div class="col-md-6 form-group offset-md-3" >
+				<label>Nome do aluno</label>
+				<input class="form-control" placeholder="Ex: Matheus Acacio" th:field="*{name}">
+			</div>
+		</div>
+		
+		<div class="row" >
+			<div class="col-md-6 form-group offset-md-3" >
+				<label>Cidade</label>
+				<input class="form-control" placeholder="Ex: Duque de Caxias" th:field="*{city}">
+			</div>
+		</div>
+		
+				<div class="row" >
+			<div class="col-md-6 form-group offset-md-3" >
+				<label>Curso</label>
+				<input class="form-control" placeholder="Ex: Direito" th:field="*{course}">
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<button type="submit" class="btn btn-sucess offset-md-4" >SALVAR</button>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a class="btn btn-outline-danger" >VOLTAR</a>
+		</div>
+	</form>
+</div>
+
+	<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/wbjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

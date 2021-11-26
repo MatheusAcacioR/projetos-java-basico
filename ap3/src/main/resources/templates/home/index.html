@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://kit.fontawesome.com/006642858d.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
+<title>AP3 - FRAMEWORKS</title>
+</head>
+<body>
+<div th:replace="fragmentos/fragmentos :: cabeçalho" ></div>
+	
+	<section class="neo-section" style="background-image: url('img/bg-index.jpg');">
+	<div class="sombra" ></div>
+	<div class="center neo-container" >
+		<h1 class="texto-centro">Sistema de gerenciamento de alunos</h1>
+	<div class="botoes" >
+		<div class="wm" >
+			<a class="btn" th:href="@{inserirAlunos}">CADASTRAR ALUNO</a>
+		</div>
+		<div class="wm" >
+			<a class="btn justify-content-center" th:href="@{alunos-adicionados}">LISTAR ALUNOS</a>
+		</div>
+		<div class="clear" ></div>
+	</div>
+</div>
+	</section>
+	
+	<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/wbjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

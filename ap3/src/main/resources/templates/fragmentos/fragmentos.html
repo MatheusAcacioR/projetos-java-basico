@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://kit.fontawesome.com/006642858d.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
+<title>AP3 - FRAMEWORKS</title>
+</head>
+<body>
+
+	<header th:fragment="cabeçalho" >
+		<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4527a0; color: #fff">
+		 <!-- <a class="navbar-brand" href="#">
+			<img src="img/logo-header-site.png" width="200px"/>
+		</a>  -->
+		<button class="navbar-toggler" type="button" data-togle="collapse" data-target="#navMobile">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div id="navMobile" class="navbar-collapse collapse justify-content-center" >
+			<a class="nav-item nav-link" th:href="@{index}">HOME</a>
+			<a class="nav-item nav-link" th:href="@{inserirAlunos}">CADASTRAR ESTUDANTE</a>
+			<a class="nav-item nav-link" th:href="@{alunos-adicionados}">LISTAR ESTUDANTES</a>
+		</div>
+		</nav>
+	</header>
+
+	<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/wbjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
